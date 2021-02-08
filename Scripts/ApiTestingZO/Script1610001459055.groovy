@@ -14,12 +14,37 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Cookie as Cookie
+import groovy.json.JsonSlurper as JsonSlurper
 
-WS.sendRequest(findTestObject('login', [('url') : GlobalVariable.base_url]))
+response1 = WS.sendRequest(findTestObject('login', [('url') : GlobalVariable.base_url]))
 
-def slurper = new groovy.json.JsonSlurper()
-def result = slurper.parseText(response.getResponseBodyContent())
-def value = result.access_token
+def slurper = new JsonSlurper()
 
-WS.sendRequest(findTestObject('Company Registrations/Create New Company', [('url') : GlobalVariable.base_url]))
+def result = slurper.parseText(response1.getResponseBodyContent())
+
+def access_token = result.access_token
+
+GlobalVariable.access_token = access_token
+
+println('access_token ' + GlobalVariable.access_token)
+
+response2 = WS.sendRequest(findTestObject('CreateNewCompany', [('url') : GlobalVariable.base_url, ('access_token') : GlobalVariable.access_token]))
+
+def result2 = slurper.parseText(response2.getResponseBodyContent())
+
+def slug = result2.company.slug
+
+GlobalVariable.slug = slug
+
+println('slug' + GlobalVariable.slug)
+
+response3 = WS.sendRequest(findTestObject('Company Registrations/get_user_companies', [('url') : GlobalVariable.base_url
+            , ('slug') : GlobalVariable.slug, ('access_token') : GlobalVariable.access_token]))
+
+def result3 = slurper.parseText(response3.getResponseBodyContent())
+
+def get_user_companies = result3.results[0]
+
+println('user companies' +get_user_companies)
 

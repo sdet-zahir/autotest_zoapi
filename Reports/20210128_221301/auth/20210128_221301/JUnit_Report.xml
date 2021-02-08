@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="auth" time="6.56" tests="1" failures="0" skips="0" errors="0">
+   <testsuite name="auth" tests="1" failures="0" errors="0" time="6.56" skips="0" timestamp="2021-01-28 22:13:14" hostname="faisal - KAKATORI" id="Test Suites/auth">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\repo_zahir_sdet\\autotest_zoapi\\Reports\\20210128_221301\\auth\\20210128_221301"/>
+         <property name="logFiles" value="D:\\repo_zahir_sdet\\autotest_zoapi\\Reports\\20210128_221301\\auth\\20210128_221301\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="faisal - KAKATORI"/>
+         <property name="hostAddress" value="192.168.43.91"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="7.9.0.208"/>
+      </properties>
+      <testcase name="Test Cases/ApiTestingZO" time="4.663" classname="Test Cases/ApiTestingZO" status="PASSED">
+         <system-out><![CDATA[2021-01-28 22:13:16 - [TEST_CASE][PASSED] - Test Cases/ApiTestingZO: Test Cases/ApiTestingZO
+
+2021-01-28 22:13:16 - [TEST_STEP][PASSED] - response1 = sendRequest(findTestObject("login", ["url":base_url])): Send request successfully
+
+2021-01-28 22:13:20 - [MESSAGE][INFO] - HAR: D:\repo_zahir_sdet\autotest_zoapi\Reports\20210128_221301\auth\20210128_221301\requests\main\0.har
+
+2021-01-28 22:13:20 - [MESSAGE][PASSED] - Send request successfully
+
+2021-01-28 22:13:20 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2021-01-28 22:13:20 - [TEST_STEP][PASSED] - result = slurper.parseText(response1.getResponseBodyContent()): null
+
+2021-01-28 22:13:20 - [TEST_STEP][PASSED] - access_token = access_token: null
+
+2021-01-28 22:13:20 - [TEST_STEP][PASSED] - println("access token from get endpoint me .." + access_token): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2021-01-28 22:13:14 - [TEST_SUITE][PASSED] - auth: Test Cases/ApiTestingZO]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

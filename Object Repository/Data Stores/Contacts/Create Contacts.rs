@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>get_contact_classifications</name>
+   <name>Create Contacts</name>
    <tag></tag>
-   <elementGuidId>308932af-00fe-485f-84b3-ae7b48891b77</elementGuidId>
+   <elementGuidId>c78dcba8-45c9-4b5f-a883-126876889c0e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n\t\&quot;code\&quot;: \&quot;C-3\&quot;,\n\t\&quot;name\&quot;: \&quot;Cust - 2\&quot;,\n\t\&quot;is_customer\&quot;: true,\n\t\&quot;is_supplier\&quot;: true,\n\t\&quot;is_employee\&quot;: true,\n\t\&quot;is_active\&quot;: true,\n\t\&quot;credit_limit\&quot;: 100000000,\n\t\&quot;term_of_payment\&quot;: {\n\t    \&quot;due_days\&quot;: 0,\n\t    \&quot;late_charge\&quot;: 0,\n\t    \&quot;discount_days\&quot;: 0,\n\t    \&quot;early_discount\&quot;: 0\n\t},\n\t\&quot;classification\&quot;: {\n\t    \&quot;id\&quot;: \&quot;{{contact_classifications.id}}\&quot;\n\t},\n\t\&quot;addresses\&quot;: [],\n\t\&quot;contact_person\&quot;: [],\n\t\&quot;phones\&quot;: [],\n\t\&quot;emails\&quot;: [],\n\t\&quot;other_fields\&quot;: [],\n\t\&quot;attachments\&quot;: []\n\t\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -18,25 +22,11 @@
       <type>Main</type>
       <value>application/json</value>
    </httpHeaderProperties>
-   <httpHeaderProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>Authorization</name>
-      <type>Main</type>
-      <value>Bearer ${access_token}</value>
-   </httpHeaderProperties>
-   <httpHeaderProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>slug</name>
-      <type>Main</type>
-      <value>${slug}</value>
-   </httpHeaderProperties>
-   <katalonVersion>7.8.0</katalonVersion>
+   <katalonVersion>7.9.0</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${url}/api/v2/contact_classifications</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${url}/api/v2/contacts</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -48,23 +38,9 @@
    <variables>
       <defaultValue>GlobalVariable.base_url</defaultValue>
       <description></description>
-      <id>1f63a368-2cc4-47d5-8428-175edb52ec5b</id>
+      <id>0ced8591-abe9-427e-a1ca-43cbfef621df</id>
       <masked>false</masked>
       <name>url</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.access_token</defaultValue>
-      <description></description>
-      <id>3fd6187a-4b17-466c-99a6-8e2c4f52d24f</id>
-      <masked>false</masked>
-      <name>aceess_token</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.slug</defaultValue>
-      <description></description>
-      <id>a3a276c2-9f5e-4cae-badf-5faa162b2ae3</id>
-      <masked>false</masked>
-      <name>slug</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

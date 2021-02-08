@@ -6,6 +6,7 @@
    <UUID>cae1b8e0-c8ce-4995-b403-c21831033917</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <projectFileLocation>D:\repo_zahir_sdet\autotest_zoapi\autotest_zoapi.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

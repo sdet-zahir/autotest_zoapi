@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>get_contact_classifications</name>
+   <name>get customers</name>
    <tag></tag>
-   <elementGuidId>308932af-00fe-485f-84b3-ae7b48891b77</elementGuidId>
+   <elementGuidId>cb48aa6e-618b-4622-97bc-8ef5924310ce</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -23,20 +23,13 @@
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
-      <value>Bearer ${access_token}</value>
+      <value>Bearer BAwKzpYLM3JMrxozeChhjV3DRwcSCFyCqMiPsWSD</value>
    </httpHeaderProperties>
-   <httpHeaderProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>slug</name>
-      <type>Main</type>
-      <value>${slug}</value>
-   </httpHeaderProperties>
-   <katalonVersion>7.8.0</katalonVersion>
+   <katalonVersion>7.9.0</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${url}/api/v2/contact_classifications</restUrl>
+   <restUrl>${url}/api/v2/contacts/?is_customer=true</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -48,23 +41,9 @@
    <variables>
       <defaultValue>GlobalVariable.base_url</defaultValue>
       <description></description>
-      <id>1f63a368-2cc4-47d5-8428-175edb52ec5b</id>
+      <id>21b3b8b7-606b-41f0-862b-0de845976dcc</id>
       <masked>false</masked>
       <name>url</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.access_token</defaultValue>
-      <description></description>
-      <id>3fd6187a-4b17-466c-99a6-8e2c4f52d24f</id>
-      <masked>false</masked>
-      <name>aceess_token</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.slug</defaultValue>
-      <description></description>
-      <id>a3a276c2-9f5e-4cae-badf-5faa162b2ae3</id>
-      <masked>false</masked>
-      <name>slug</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

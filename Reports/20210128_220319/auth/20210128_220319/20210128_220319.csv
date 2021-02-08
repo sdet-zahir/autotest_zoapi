@@ -1,0 +1,9 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+auth,,,,2021-01-28 22:03:30,2021-01-28 22:03:37,7.127s,PASSED
+,,,,,,,
+Test Cases/ApiTestingZO,,,,2021-01-28 22:03:31,2021-01-28 22:03:37,6.117s,PASSED
+"response1 = sendRequest(findTestObject(""login"", [""url"":base_url]))",,,,2021-01-28 22:03:32,2021-01-28 22:03:37,4.934s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2021-01-28 22:03:37,2021-01-28 22:03:37,0.194s,PASSED
+result = slurper.parseText(response1.getResponseBodyContent()),,,,2021-01-28 22:03:37,2021-01-28 22:03:37,0.287s,PASSED
+value = access_token,,,,2021-01-28 22:03:37,2021-01-28 22:03:37,0.122s,PASSED
+"println(""access token from get ..me"" + value)",,,,2021-01-28 22:03:37,2021-01-28 22:03:37,0.078s,PASSED

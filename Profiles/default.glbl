@@ -6,7 +6,27 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://togo.zahironline.com'</initValue>
+      <initValue>'https://go.zahironline.com'</initValue>
       <name>base_url</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'slugtestqa2123133751-fb.zahironline.com'</initValue>
+      <name>slug</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'sdet.zahir@gmail.com'</initValue>
+      <name>username</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'z4h1r2020'</initValue>
+      <name>password</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'UQQZjyGZ1sDe1pyWkUYV8Gc8QKr7Y9TxKO6kWOpe'</initValue>
+      <name>access_token</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

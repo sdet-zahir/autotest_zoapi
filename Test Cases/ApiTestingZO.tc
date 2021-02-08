@@ -5,4 +5,25 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>117d1b23-f5da-4a30-9f24-93e2b916846c</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.base_url</defaultValue>
+      <description></description>
+      <id>17b8e6e5-bb7a-4f1e-8053-e894a5532b3c</id>
+      <masked>false</masked>
+      <name>url</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.access_token</defaultValue>
+      <description></description>
+      <id>ce440a90-27e3-406c-b8e3-d71ab6f3c82d</id>
+      <masked>false</masked>
+      <name>access_token</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.slug</defaultValue>
+      <description></description>
+      <id>9741bf0d-3e1f-4e97-b2d2-3186b76529fc</id>
+      <masked>false</masked>
+      <name>slug</name>
+   </variable>
 </TestCaseEntity>
